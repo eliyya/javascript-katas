@@ -15,11 +15,10 @@ Examples
 */
 function generateHashtag (str) {
     if (!str.trim().length) return false
-    console.log(str.trim());
-    const h = '#'+(str.trim().split(/\s+/).map(i=>{
+    const h = '#'+str.trim().split(/\s+/).map(i=>{
         const [f,...r] = i.split('')
         return f.toUpperCase() + r.join('')
-    }).join(''))
+    }).join('')
     return h.length > 140 ? false : h
   }
 
